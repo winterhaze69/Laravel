@@ -8,6 +8,7 @@ class Serie extends Controller
 {
  public function insertOne(Request $request)
  {
+
       $serie = new \App\Serie;
       $serie->title = $request->input('title');
       $serie->publication_year =$request->input('publication_year');

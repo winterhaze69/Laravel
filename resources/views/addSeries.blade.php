@@ -10,14 +10,14 @@
       @csrf
       <input required placeholder="Title" type="text" name="title" value="">
       <input required placeholder="1920" type="number" name="publication_year">
-      <select name="actors">
+      <select multiple name="actors[]">
           @foreach ($actors as $actor)
               <option value="{{ $actor->id }}">
                   {{ $actor->completeName() }}
               </option>
           @endforeach
       </select>
-      <select name="genres">
+      <select multiple name="genres[]">
           @foreach ($genres as $genre)
               <option value="{{ $genre->id }}">
                   {{ $genre->name }}
